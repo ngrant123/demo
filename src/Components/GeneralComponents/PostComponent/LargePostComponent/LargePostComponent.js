@@ -227,7 +227,7 @@ class LargePostComponent extends Component{
 
 		this.state={
 			companyTitle:"CEO",
-			companyName:"Razu",
+			companyName:"Sympocia",
 			industries:[]
 
 		};
@@ -246,7 +246,6 @@ class LargePostComponent extends Component{
 
 	handleTextareaClick(){
 		document.getElementById("posttextarea").value="";
-		//document.getElementById("posttextarea").style.borderColor="red";
 	}
 
 	handleChange(props){
@@ -268,7 +267,7 @@ class LargePostComponent extends Component{
 
 
 				<div class="dropdown" style={{position:"absolute", height:"13%",width:"20%",left:"70%",top:"5%", zIndex:"2"}}>
-						<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style={{backgroundColor:"#5298F8",width:"100%",left:"2%",top:"2%",height:"100%",color:"white"}} onClick={()=>this.testerClick()}>Industry
+						<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style={{backgroundColor:"#5298F8",width:"100%",left:"2%",top:"2%",height:"100%",color:"white"}}>Industry
 						   	<span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu">
@@ -288,7 +287,6 @@ class LargePostComponent extends Component{
 							<img src={testdata.profileimage} style={{backgroundColor:"red", width:"100%",height:"100%",borderRadius:"50%"}}/>
 						</ProfileImageContainer>
 						<EmployeeTitleContainer><b>{this.state.companyTitle}</b></EmployeeTitleContainer>
-						<CompanyTitleContainer>{this.state.companyName}</CompanyTitleContainer>
 	 	
 					</ProfileContainer>
 

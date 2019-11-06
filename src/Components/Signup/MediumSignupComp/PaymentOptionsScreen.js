@@ -104,19 +104,10 @@ const paymentOptions = [
 	{
 		pricedescription:'Basic',
 		number: '$14.99',
-		description: 'Base Plan Affordable for Startups',
+		description: 'Base Plan Affordable for Serious Students',
 		id:2
 
-	},
-	{
-		pricedescription:'Premium',
-		number: '$14.99',
-		description: 'Base Plan Affordable Plan for Startups',
-		id:3
-
 	}
-
-	
 
 	];
 
@@ -218,6 +209,3 @@ handleClick(){
 
 
 export default PaymentOptions;
-
-
-

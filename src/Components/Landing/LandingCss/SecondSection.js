@@ -54,7 +54,7 @@ export const SeperationDiv = styled.div`
   background-color:black;
   width:100%;
   height:10%;
-  background-color:#322969;
+  background-color: #272727;
 
 `;
 

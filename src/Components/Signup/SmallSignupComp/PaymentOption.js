@@ -185,10 +185,7 @@ class PaymentOption extends Component {
 
 						<P1SecondDescription>
 							<ul> 
-								<li> Browse Startups </li>
-								<li> Connect with Investors </li>
-								<li> Connect with similar Startups</li>
-
+								<li> Browse other users </li>
 							</ul>
 						 </P1SecondDescription>
 						<P1Submit onMouseOver= {()=> this.handleHoverIn()} onMouseOut={()=> this.handleHoverOut()} onClick={()=> this.handleOnClick()}> Choose Free </P1Submit>

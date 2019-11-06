@@ -114,13 +114,13 @@ render(){
       delay: 1200           // delay between two scoll animation
     }
 
-	return (
+  return (
    
     <ScrollPage {...options}>
      <Container>
 
          <Section>
-          		<FirstContainer>
+              <FirstContainer>
 
                   <NavBarContainer>
 
@@ -133,26 +133,25 @@ render(){
 
                   <IntroMain>
 
-                    Built For Startups
+                    Built For Students
                   </IntroMain>
 
                   <IntroSec>
-                    The first social media platform made for startups to help
-                    them excel and reach their true potential
+                    The first platform that allows students who have employees to connect with one another
                   </IntroSec>
 
-              		<SignInformation>
+                  <SignInformation>
 
-                        	<NameInput id="Name" placeholder="Firstname"></NameInput>
+                          <NameInput id="Name" placeholder="Firstname"></NameInput>
 
 
-                        	<LastInput id ="LastName" placeholder="Lastname"></LastInput>
+                          <LastInput id ="LastName" placeholder="Lastname"></LastInput>
 
                           <EmailInput id ="Email" placeholder="Email" ></EmailInput>
 
                           <SubmitButton information = { this.state.firstname } onClick ={() => this.handleSignupClick()} to="/signup"> Sign Up  </SubmitButton>
 
-                  	</SignInformation>
+                    </SignInformation>
               </FirstContainer>
               </Section>
 
@@ -166,15 +165,14 @@ render(){
 
                     <SecondPageHead>
 
-                      Why this company name?
+                      Why connect?
 
                     </SecondPageHead>
 
                     <SecondPageDescrip>
 
-                          Come up with an interesting explanation about 
-                          the website as a whole and how it will increase 
-                          the startup experience and etc.
+                          The purpose of this website is to allow students to connect with other students who are in small companies 
+
 
                     </SecondPageDescrip>
                     <SecondBottomNav>
@@ -195,8 +193,8 @@ render(){
             </Container>
         </ScrollPage> 
 
-		);
-	}
+    );
+  }
 }
 
 export default LLanding;

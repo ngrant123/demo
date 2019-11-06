@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { GeneralNavBar } from "../../GeneralComponents/NavBarComponent/LargeNavBarComponent/LargeNavBarComponent.js";
+
 import { 
 		credientialMapSearch,
 		UserLocation
@@ -47,6 +49,19 @@ const SearchContainer = styled.div`
 
 `;
 
+const NavBar = styled.div`
+	position:absolute;
+	left:10%;
+	height:7%;
+	background-color:white;
+	width:85%;
+	z-index:5;
+	border-radius:5px;
+
+
+
+`;
+
 const testerdata= [
 	[
 		72,
@@ -83,13 +98,14 @@ class LargeMapContainer extends Component {
 		super(props);
 
 		  this.state = {
-		    lat: -73.97732549999999,
-		    lng:40.7527743,
+		    lat: 40.7527743,
+		    lng:-73.97732549999999,
 		    testlat:0,
 		    zoom: 16,
 			showShadowBackground:false,
 			companiesLocation:[]
   		  }
+
 
 	}
 
@@ -173,6 +189,13 @@ class LargeMapContainer extends Component {
 			<Container>
 				{this.displayShadowBackground()}
 
+				<NavBar>
+					<GeneralNavBar
+						pageType={"Map"}
+					/>
+
+				</NavBar>
+
 				<Map center={position} zoom={this.state.zoom} style={{position:"absolute",height:"900px",width:"107%",zIndex:"1"}}>
 			        <TileLayer
 			          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -202,21 +225,21 @@ class LargeMapContainer extends Component {
       			<SearchContainer>
       				<form style={{position:"absolute",top:"10%",left:"15%",width:"90%",height:"80%"}}>
 
-      					<label style={{fontSize:"150%",marginRight:"10px",color:"#5298F8"}}> Enter the industry you want to search:  <span style={{fontSize:"60%"}}> ( Optional ) </span></label>
-      					<input type="text" id="IndustrySearchValue" placeholder="Text1" style={{marginBottom:"10px",width:"70%",height:"12%"}} />
+      					<label style={{fontSize:"150%",marginRight:"10px",color:"#5298F8"}}> Enter the degree area you want to search:  <span style={{fontSize:"60%"}}> ( Optional ) </span></label>
+      					<input type="text" id="IndustrySearchValue" placeholder="e.x. Engineering" style={{marginBottom:"10px",width:"70%",height:"12%"}} />
 
       					<br/>
       					<hr style={{position:"fixed",left:"0%",width:"40%"}}/>
       					<br/>
       					<label style={{fontSize:"150%",marginRight:"10px",color:"#5298F8"}}>Enter the area: <span style={{fontSize:"60%"}}> ( Optional ) </span></label>
       					<br/>
-      					<input type="text" id="AreaSearchValue" placeholder="" style={{marginBottom:"10px",width:"70%",height:"12%"}}/>
+      					<input type="text" id="AreaSearchValue" placeholder="e.x. Queens, NY" style={{marginBottom:"10px",width:"70%",height:"12%"}}/>
       					<br/>
       					<hr style={{position:"fixed",left:"0%",width:"40%"}}/>
       					<br/>
       					<label style={{fontSize:"150%",marginRight:"10px",color:"#5298F8"}}> Search by Name: <span style={{fontSize:"60%"}}> ( Optional ) </span></label>
       					<br/>
-      					<input type="text" id="NameSearchValue" placeholder="Text1" style={{marginBottom:"10px",width:"70%",height:"12%"}}/>
+      					<input type="text" id="NameSearchValue" placeholder="e.x. Nathan" style={{marginBottom:"10px",width:"70%",height:"12%"}}/>
       					<br/>
 
       					<input type="submit" placeholder="Submit"

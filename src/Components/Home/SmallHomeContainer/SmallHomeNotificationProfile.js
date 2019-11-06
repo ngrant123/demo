@@ -115,8 +115,8 @@ class SmallHomeNotificationProfile extends Component{
 						<NotificationPersonImage>
 							<img src={this.state.profileimage} style={{width:"100%",height:"100%",borderRadius:"50%"}}/>
 						</NotificationPersonImage>
-						<CompanyName>Razu</CompanyName>
-						<NotificationText><span style={{color:"#20ff1e"}}> Harvey </span> commented on your story</NotificationText>
+						<CompanyName>Sympocia</CompanyName>
+						<NotificationText><span style={{color:"#20ff1e"}}> Christian </span> commented on your story</NotificationText>
 						<TimeNotificationActivated>Today at 12:30 pm</TimeNotificationActivated>
 
 			</Container>

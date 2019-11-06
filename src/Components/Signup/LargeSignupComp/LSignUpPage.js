@@ -95,7 +95,7 @@ const CompanyName = styled.textarea`
 
 `;
 
-const DescriptionCompany = styled.div`
+const SchoolName = styled.div`
 
 	position:absolute;
 	top:15%;
@@ -276,12 +276,12 @@ class LSignupPage extends Component {
 
 		this.state= {
 
-			pageText:"Description about what the website does and what the user is going to be doing now",
-			companynameDescrip:"Information",
+			pageText:"In order to conenct you with other students we have to have some information about you",
+			Descrip:"Information",
 			personalInformation:props,
-			companyname:"",
+			schoolName:"",
 			location:"",
-			companytype:"",
+			degree:"",
 			backgroundURL:""
 	
 		};
@@ -291,18 +291,14 @@ class LSignupPage extends Component {
 	handleSubmit(){
 
 		//Update the state with all of the displayed user information 
-		var companyName= document.getElementById("company").value;
+		var schoolName= document.getElementById("schoolName").value;
 		var Location= document.getElementById("location").value;
 		
-
-		//Test
-		console.log(companyName);
-		console.log(Location);
 
 
 		this.setState({
 
-			companyname:companyName,
+			schoolName:schoolName,
 			location:Location, 
 		
 
@@ -315,12 +311,12 @@ class LSignupPage extends Component {
 
 
 	}
-	handleCompanyDivClick = () =>{
+	handleSchoolDivClick = () =>{
 
 			this.setState({
 
-				companynameDescrip:"Location Information",
-				pageText:"This field will change for the user and is therefore option 1",
+				Descrip:"School Name",
+				pageText:"Enter your school name",
 				backgroundURL:CompanyLocationBackground
 			});
 	}
@@ -329,18 +325,18 @@ class LSignupPage extends Component {
 
 			this.setState({
 
-				companynameDescrip:"Option 2 Infromation",
-				pageText:"This field will change for the user and is therefore option 2",
+				Descrip:"Enter Location",
+				pageText:"Enter Location",
 				backgroundURL:CompanyNameBackground
 
 			});
 	}
 
-	handleCompanyTypeDivClick=()=>{
+	handleDegreeDivClick=()=>{
 			this.setState({
 
-				companynameDescrip:"Option 3 Information",
-				pageText:"This field will chage for the user and is therefore option 3",
+				Descrip:"Enter degree",
+				pageText:"Enter degree",
 				backgroundURL:CompanyTypeBackground
 
 			});
@@ -385,21 +381,20 @@ class LSignupPage extends Component {
 					
 					<SignUp id="signup">
 
-						<DescriptionCompany> Company 1 </DescriptionCompany>
+						<SchoolName> School Name </SchoolName>
 
-						<CompanyName id="company" placeholder="Company Name" onClick={()=> this.handleCompanyDivClick()}></CompanyName>
+						<CompanyName id="schoolName" placeholder="School Name" onClick={()=> this.handleSchoolDivClick()}></CompanyName>
 
-						<DescriptionLocation> Location Company </DescriptionLocation>
+						<DescriptionLocation> Location</DescriptionLocation>
 						<LocationName id="location" placeholder="Location" onClick={()=> this.handleLocationDivClick()}></LocationName>
 
-						<DescriptionCompanyType> Company Type </DescriptionCompanyType>
+						<DescriptionCompanyType> Degree </DescriptionCompanyType>
 			
-							<input list="startupcategories" name="startupcategories" style={divStyle} onClick={()=> this.handleCompanyTypeDivClick()}/>
+							<input list="startupcategories" name="startupcategories" style={divStyle} onClick={()=> this.handleDegreeDivClick()}/>
 								<datalist id="startupcategories">
 									<option value="Fashion" />
 									<option value= "Engineering" />
 								</datalist>
-				
 					</SignUp>
 
 

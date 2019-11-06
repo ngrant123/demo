@@ -436,6 +436,7 @@ class AddEmployees extends Component{
 		var reader= new FileReader();
 
 		reader.onloadend=function(){
+			console.log(reader.result);
 			node.src=reader.result;
 			node.style.opacity="1";
 

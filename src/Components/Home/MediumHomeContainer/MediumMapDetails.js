@@ -23,6 +23,7 @@ const MapContainer = styled.div`
 	top:5%;
 	height:100%;
 	left:0%;
+	z-index:5;
 
 `;
 
@@ -43,7 +44,7 @@ const ShortConclusion = styled.div`
 	position:absolute;
 	width:24%;
 	height:90%;
-	top:5%;
+	top:20%;
 	left:73%;
 	font-size:100%;
 	overflow:scroll;
@@ -95,11 +96,11 @@ const PeopleLeftInIndustry = styled.div`
 const data = {
 
 	labels: [
-		'Red',
-		'Green',
+		'Not Contacted',
+		'Contacted',
 	],
 	datasets: [{
-		data: [300, 50],
+		data: [300, 0],
 		backgroundColor: [
 		'#FF6384',
 		'#36A2EB',
@@ -121,9 +122,9 @@ class MediumMapDetails extends Component{
 		this.state={
 
 			data:{},
-			totalNumberContacted:17,
+			totalNumberContacted:0,
 			totalNumberInIndustry:25,
-			totalNumberNotContactedInIndustry:25,
+			totalNumberNotContactedInIndustry:0,
 			totalLeftInEntireSite:315,
 			totalInvestorsContacted:0,
 			totalInvestorsInIndustry:0,
@@ -171,9 +172,8 @@ class MediumMapDetails extends Component{
   				 </div>
 
 	  				 <ShortConclusion>
-	  				 	In conclusion you have communicated with about blah blah blah
-	  				 	short description about all the data we receieved that companies are
-	  				 	gonna use and stuff blah blah blah
+	  				 	So far you have contacted 0 people. Make new friends and let everyone know what youre thinking about 
+	  				 	today! 
 	  				 </ShortConclusion>
 
   				 <MapContainerDivider/>
