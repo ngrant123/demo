@@ -6,7 +6,6 @@ import Landing from "./Pages/Landing";
 import Signup from "./Components/Signup/LargeSignupComp/LSignUpPage";
 import ProfileScreen from "./Components/Profile/LargeProfileComp/LProfile";
 import {BrowserRouter as Router, Route , Switch} from 'react-router-dom';
-import InvestorScreen from "./Components/Investor/LargeInvestorComp/LInvestor.js";
 import HomeScreen from "./Components/Home/LargeHomeComp/LargeHomeContainer.js";
 import MapScreen from "./Components/Map/LargeMapComp/LargeMapContainer.js"
 
@@ -34,7 +33,6 @@ const application  = (
 			}/>
 			<Route path="/home" component= {HomeScreen}/>
 			<Route path="/profile" component = {ProfileScreen} />
-			<Route path="/investor" component= {InvestorScreen} />
 			<Route path="/map" component= {MapScreen} />
 
 		</Switch>

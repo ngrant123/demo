@@ -8,7 +8,6 @@ import { getNewFeedUpdates } from "../../../Actions/Requests/HomePageAxiosReques
 import MediumMapDetails from "../MediumHomeContainer/MediumMapDetails.js";
 import Industries from "../../../Constants/constants.js";
 import Posts from "../MediumHomeContainer/MediumPostContainer.js";
-import Chat from "../../GeneralComponents/ChatComponent/LargeChatComponent/LargeChatComponent.js";
 import GeneralPostCreationContainer from "../../GeneralComponents/PostComponent/LargePostComponent/LargePostComponent.js";
 
 const Container= styled.div`
@@ -216,7 +215,6 @@ class LargeHomeContainer extends Component{
 			<div>
 				<ShadowContainer id="shadowContainer" onClick={()=>this.closeShadowContainer()}/>
 					<ChatContainer>
-						<Chat />
 
 					</ChatContainer>
 
